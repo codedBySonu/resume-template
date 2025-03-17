@@ -1,0 +1,336 @@
+%-------------------------
+% Resume in Latex
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Your Name} % Your Name
+\newcommand{\course}{Bachelor of Technology} % Your Course
+\newcommand{\roll}{XXXXXX} % Your Roll No.
+\newcommand{\phone}{8252xxxxxxx} % Your Phone Number
+\newcommand{\emaila}{youremail@email.com} %Email 1
+\newcommand{\emailb}{officialemail@rgipt.ac.in} %Email 2
+\newcommand{\github}{GITHUBUSERNAME} %Github
+\newcommand{\website}{https://example.com/} %Website
+\newcommand{\linkedin}{linkedinuser} %linkedin
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+\parbox{2.35cm}{%
+
+\includegraphics[width=2cm,clip]{rgipt_logo.png}
+
+}\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r}
+  \textbf{\LARGE \name} & +91-\phone\\
+  {Roll No.:\roll} & \href{mailto:\emaila}{\emaila} \\
+  \course &  \href{mailto:\emailb}{\emailb}\\
+  {Computer Science and Engineering} &  \href{https://github.com/\github}{Github} \\
+  {Rajiv Gandhi Institute of Petroleum Technology} & \href{https://www.linkedin.com/in/\linkedin/}{LinkedIn}
+\end{tabularx}
+}
+
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+\setlength{\tabcolsep}{5pt} 
+\small{\begin{tabularx}
+{\dimexpr\textwidth-3mm\relax}{|c|C|c|c|}
+  \hline
+  \textbf{Degree/Certificate} & \textbf{Institute/Board} & \textbf{CGPA/Percentage} & \textbf{Year} \\
+  \hline
+  B.Tech. (CSE) & Rajiv Gandhi Institute of Petroleum Technology & 8.21 & 2022-2026 \\
+  \hline
+  Senior Secondary & CBSE Board & 88.0\% & 2022 \\
+  \hline
+  Secondary & CBSE Board & 85.5\% & 2020 \\
+  \hline
+\end{tabularx}}
+\vspace{-2mm}
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Company Name}{Location}
+  {Job Title}{Start Date – End Date}
+  \resumeItemListStart
+    \item {Briefly describe your role and key responsibilities.}
+    \item {Mention any achievements, improvements, or contributions.}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Company Name}{Location}
+  {Job Title}{Start Date – End Date}
+  \resumeItemListStart
+    \item {Highlight your technical contributions or impact on the team.}
+    \item {Mention any tools, technologies, or frameworks you used.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {Project Name} 
+  {Brief description of the project and its purpose.} 
+  {Start Date – End Date}
+  {}
+
+  \resumeItemListStart
+    \item {\textbf{Tools \& technologies used}: List relevant technologies here.}
+    \item {Mention key features, functionalities, or impact of the project.}
+  \resumeItemListEnd
+
+\resumeProject
+  {Project Name} 
+  {Brief description of the project and its purpose.} 
+  {Start Date – End Date}
+  {}
+
+  \resumeItemListStart
+    \item {\textbf{Tools \& technologies used}: List relevant technologies here.}
+    \item {Mention key features, functionalities, or impact of the project.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+% ----------------- Key courses taken -----------------
+\section{Key Courses Taken}
+ \resumeHeadingSkillStart
+  \resumeSubItem{} % Category
+    {Data Structure,Algorithms,DBMS,Machine Learning, Artificial Intelligence, Web Services, Operating System}
+%  \resumeSubItem{Operating Systems}
+%  {Windows, Linux*} 
+% \hfill \textit{\footnotesize{* Elementary proficiency}} \hspace{3mm}
+ \resumeHeadingSkillEnd
+
+ 
+% --------------------------Technical Skills --------------------
+\section{Technical Skills}
+\resumeHeadingSkillStart
+
+\resumeSubItem{Programming: } 
+  {List programming languages here (e.g., C/C++, Python, JavaScript, etc.)}
+
+\resumeSubItem{Tools \& OS: } 
+  {List tools, platforms, and operating systems (e.g., Git, Linux, Windows, etc.)}
+
+\resumeSubItem{Libraries/Frameworks: } 
+  {List relevant libraries and frameworks (e.g., React, Pandas, scikit-learn, etc.)}
+
+\resumeSubItem{Web Skills: } 
+  {Mention web-related technologies (e.g., HTML, CSS, JavaScript, ReactJS, NextJS, etc.)}
+
+\resumeHeadingSkillEnd
+
+
+
+
+% ----------------- Achivements ------------------------
+\section{Achievements}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumePOR{Achievement Title} 
+    {Brief description of the award/event and any notable details} 
+    {Year}
+
+\resumePOR{Achievement Title} 
+    {Brief description of the award/event and any notable details} 
+    {Year}
+
+\resumeSubHeadingListEnd
+\vspace{-4mm}
+
+
+
+
+% ---------------------- PORs ------------------------
+
+\section{Positions of Responsibility}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumePOR{Position Title,} 
+    {Organization/Club/Event Name} 
+    {Start Date – End Date or Present}
+
+\resumePOR{Position Title,} 
+    {Organization/Club/Event Name} 
+    {Start Date – End Date or Present}
+
+\resumeSubHeadingListEnd
+\vspace{-4mm}
+
+
+
+
+
+
+\hspace*{-5mm}\rule{1.035\textwidth}{0.1mm}
+
+%-------------------------------------------
+\end{document}
+
+
+
+% -------- End Document -------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%-------------------------
+% Resume in Latex
+% License : MIT
+% Author : 22CS3073@rgipt.ac.in
+%------------------------
+
