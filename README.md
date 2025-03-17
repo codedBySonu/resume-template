@@ -3,7 +3,7 @@
 A LaTeX-based professional resume template designed specifically for students of **Rajiv Gandhi Institute of Petroleum Technology (RGIPT)**.  
 
 ## Preview  
-![Resume Preview](images/resume-preview.png)  
+![Resume Preview](Resume-preview.png)  
 
 ## Features  
 ✅ Clean, professional design following industry standards  
